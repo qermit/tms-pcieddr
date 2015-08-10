@@ -96,7 +96,7 @@
 # with these devices that contain only 1.8 V banks.
 #
 set_false_path -through [get_nets sys_rst_n]
-set_property PACKAGE_PIN AG26 [get_ports sys_rst_n]
+set_property PACKAGE_PIN AB1 [get_ports sys_rst_n]
 set_property IOSTANDARD LVCMOS25 [get_ports sys_rst_n]
 set_property PULLUP true [get_ports sys_rst_n]
 
@@ -113,7 +113,7 @@ set_property PULLUP true [get_ports sys_rst_n]
 #INST "refclk_ibuf" LOC = IBUFDS_GTE2_X1Y2;
 #INST "*/pcie_core_i/pcieclk_ibuf" LOC = IBUFDS_GTE2_X1Y2;
 
-set_property LOC IBUFDS_GTE2_X1Y0 [get_cells bpm_pcie_a7_i/pcieclk_ibuf]
+set_property LOC IBUFDS_GTE2_X1Y2 [get_cells bpm_pcie_a7_i/pcieclk_ibuf]
 
 #
 # Transceiver instance placement.  This constraint selects the
@@ -127,7 +127,7 @@ set_property LOC IBUFDS_GTE2_X1Y0 [get_cells bpm_pcie_a7_i/pcieclk_ibuf]
 # PCIe Lane 3
 
 # GTP Common Placement
-set_property LOC GTPE2_COMMON_X1Y0 [get_cells {bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_quad.pipe_common.qpll_wrapper_i/gtp_common.gtpe2_common_i}]
+set_property LOC GTPE2_COMMON_X1Y1 [get_cells {bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_quad.pipe_common.qpll_wrapper_i/gtp_common.gtpe2_common_i}]
 
 #
 # PCI Express Block placement. This constraint selects the PCI Express
@@ -136,13 +136,13 @@ set_property LOC GTPE2_COMMON_X1Y0 [get_cells {bpm_pcie_a7_i/pcie_core_i/gt_top.
 set_property LOC PCIE_X0Y0 [get_cells bpm_pcie_a7_i/pcie_core_i/pcie_top_i/pcie_7x_i/pcie_block_i]
 
 # MGT 116
-set_property PACKAGE_PIN AK17 [get_ports {pci_exp_rxn[0]}]
+set_property PACKAGE_PIN E13 [get_ports {pci_exp_rxn[0]}]
 
-set_property PACKAGE_PIN AM16 [get_ports {pci_exp_rxn[1]}]
+set_property PACKAGE_PIN E15 [get_ports {pci_exp_rxn[1]}]
 
-set_property PACKAGE_PIN AK15 [get_ports {pci_exp_rxn[2]}]
+set_property PACKAGE_PIN C16 [get_ports {pci_exp_rxn[2]}]
 
-set_property PACKAGE_PIN AK13 [get_ports {pci_exp_rxn[3]}]
+set_property PACKAGE_PIN E17 [get_ports {pci_exp_rxn[3]}]
 
 #
 # BlockRAM placement
