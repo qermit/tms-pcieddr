@@ -1,10 +1,10 @@
 -- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:48:31 MST 2014
--- Date        : Wed Jul 15 23:21:43 2015
--- Host        : andrzej running 64-bit Ubuntu 12.04.4 LTS
+-- Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:24:04 MST 2014
+-- Date        : Tue Jul 28 09:42:07 2015
+-- Host        : SDPC117 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/andrzej/projects/pcie_vivado/project_vivado/GEM_WEST.srcs/sources_1/ip/clock_unit/clock_unit_funcsim.vhdl
+--               D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_funcsim.vhdl
 -- Design      : clock_unit
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

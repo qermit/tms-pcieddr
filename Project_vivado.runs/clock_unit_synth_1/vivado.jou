@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:24:04 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jul 28 09:41:26 2015
+# Process ID: 8408
+# Log file: D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1/clock_unit.vds
+# Journal file: D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clock_unit.tcl

@@ -1,0 +1,499 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:24:04 MST 2014
+| Date         : Tue Jul 28 09:54:47 2015
+| Host         : SDPC117 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_clock_utilization -file pcie_module_clock_utilization_placed.rpt
+| Design       : pcie_module
+| Device       : xc7a200t
+-----------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Details of Global Clocks
+3. Details of Regional Clocks
+4. Details of Multi-Regional Clocks
+5. Details of I/O Clocks
+6. Details of Local Clocks
+7. Clock Regions : Key Resource Utilization
+8. Net wise resources used in clock region X1Y0
+9. Net wise resources used in clock region X0Y1
+10. Net wise resources used in clock region X1Y1
+11. Net wise resources used in clock region X0Y2
+12. Net wise resources used in clock region X1Y2
+13. Net wise resources used in clock region X0Y3
+14. Net wise resources used in clock region X1Y3
+15. Net wise resources used in clock region X0Y4
+16. Net wise resources used in clock region X1Y4
+
+1. Clock Primitive Utilization
+------------------------------
+
++-------+------+-----------+-----------+
+| Type  | Used | Available | Num Fixed |
++-------+------+-----------+-----------+
+| BUFG  |   12 |        32 |         0 |
+| BUFH  |    2 |       120 |         0 |
+| BUFIO |    0 |        40 |         0 |
+| MMCM  |    3 |        10 |         1 |
+| PLL   |    1 |        10 |         1 |
+| BUFR  |    0 |        40 |         0 |
+| BUFMR |    0 |        20 |         0 |
++-------+------+-----------+-----------+
+
+
+2. Details of Global Clocks
+---------------------------
+
++-------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------+---------------+-----------+
+|       |                                                                                                               |                                                                                               |   Num Loads   |       |               |           |
++-------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-------+-------+-------+---------------+-----------+
+| Index | BUFG Cell                                                                                                     | Net Name                                                                                      |  BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-------+-------+-------+---------------+-----------+
+|     1 | clock_unit_i/U0/clkout2_buf                                                                                   | clock_unit_i/U0/clk_out2                                                                      |     0 |     0 |    no |         0.000 |     0.000 |
+|     2 | clock_unit_i/U0/clkout3_buf                                                                                   | clock_unit_i/U0/clk_out3                                                                      |     0 |     0 |    no |         0.000 |     0.000 |
+|     3 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/txoutclk_i.txoutclk_i    | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk   |     1 |     1 |    no |         1.721 |     0.086 |
+|     4 | clock_unit_i/U0/clkf_buf                                                                                      | clock_unit_i/U0/clkfbout_buf_clock_unit                                                       |     1 |     1 |    no |         1.566 |     0.078 |
+|     5 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.u_bufg_mmcm_ps_clk                                    | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk                                    |    18 |     7 |    no |         2.332 |     0.648 |
+|     6 | clock_unit_i/U0/clkout1_buf                                                                                   | clock_unit_i/U0/clk_out1                                                                      |    54 |    20 |    no |         1.784 |     0.425 |
+|     7 | clock_unit_i/U0/clkout4_buf                                                                                   | clock_unit_i/U0/clk_out4                                                                      |    62 |    30 |    no |         1.835 |     1.835 |
+|     8 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1   | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk |   331 |    60 |    no |         1.786 |     0.349 |
+|     9 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i       | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK      |   335 |    79 |    no |         1.805 |     0.395 |
+|    10 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1       |  1986 |   545 |    no |         1.821 |     0.450 |
+|    11 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufg_clkdiv0                                                 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1                                             |  9220 |  2562 |    no |         1.843 |     0.503 |
+|    12 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2_i1.usrclk2_i1   | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2       | 13562 |  4475 |    no |         1.943 |     0.598 |
++-------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-------+-------+-------+---------------+-----------+
+
+
++-------+------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                                  |                                                                      |   Num Loads  |       |               |           |
++-------+------------------------------------------------------------------+----------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | BUFH Cell                                                        | Net Name                                                             | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+------------------------------------------------------------------+----------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufh_auxout_clk | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/n_0_u_bufh_auxout_clk |    0 |     0 |    no |         0.000 |     0.000 |
+|     2 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufh_pll_clk3   | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/pll_clk3              |    1 |     1 |    no |         0.860 |     0.043 |
++-------+------------------------------------------------------------------+----------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+
+
++-------+---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                                                             |                                                                                                 |   Num Loads  |       |               |           |
++-------+---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | MMCM Cell                                                                                   | Net Name                                                                                        | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz |    1 |     1 |    no |         1.766 |     0.088 |
+|     2 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb    |    1 |     1 |    no |         0.012 |     0.001 |
+|     3 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1   |    1 |     1 |    no |         1.766 |     0.088 |
+|     4 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2   |    1 |     1 |    no |         1.766 |     0.088 |
+|     5 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.mmcm_i                              | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/clk_pll_i                                        |    1 |     1 |   yes |         1.524 |     0.076 |
+|     6 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.mmcm_i                              | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk_bufg_in                              |    1 |     1 |   yes |         1.524 |     0.076 |
+|     7 | clock_unit_i/U0/mmcm_adv_inst                                                               | clock_unit_i/U0/clk_out1_clock_unit                                                             |    1 |     1 |    no |         1.559 |     0.078 |
+|     8 | clock_unit_i/U0/mmcm_adv_inst                                                               | clock_unit_i/U0/clk_out2_clock_unit                                                             |    1 |     1 |    no |         1.559 |     0.078 |
+|     9 | clock_unit_i/U0/mmcm_adv_inst                                                               | clock_unit_i/U0/clk_out3_clock_unit                                                             |    1 |     1 |    no |         1.559 |     0.078 |
+|    10 | clock_unit_i/U0/mmcm_adv_inst                                                               | clock_unit_i/U0/clk_out4_clock_unit                                                             |    1 |     1 |    no |         1.559 |     0.078 |
+|    11 | clock_unit_i/U0/mmcm_adv_inst                                                               | clock_unit_i/U0/clkfbout_clock_unit                                                             |    1 |     1 |    no |         1.559 |     0.078 |
+|    12 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz |    2 |     2 |    no |         1.766 |     0.088 |
++-------+---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+
+
++-------+--------------------------------------------------------+-------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                        |                                                             |   Num Loads  |       |               |           |
++-------+--------------------------------------------------------+-------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | PLL Cell                                               | Net Name                                                    | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+--------------------------------------------------------+-------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/auxout_clk_i |    1 |     1 |   yes |         1.165 |     0.058 |
+|     2 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/pll_clk3_out |    1 |     1 |   yes |         1.165 |     0.058 |
+|     3 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/pll_clkfbout |    1 |     1 |   yes |         0.012 |     0.001 |
+|     4 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/freq_refclk  |   13 |    13 |   yes |         1.171 |     0.686 |
+|     5 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mem_refclk   |   13 |    13 |   yes |         1.150 |     0.665 |
+|     6 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/sync_pulse   |   13 |    13 |   yes |         1.149 |     0.664 |
++-------+--------------------------------------------------------+-------------------------------------------------------------+------+-------+-------+---------------+-----------+
+
+
+3. Details of Regional Clocks
+-----------------------------
+
+4. Details of Multi-Regional Clocks
+-----------------------------------
+
+5. Details of I/O Clocks
+------------------------
+
+6. Details of Local Clocks
+--------------------------
+
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                                                                                                                                                                |                                                                                                                                                                                            |   Num Loads  |       |               |           |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | Local Clk Src                                                                                                                                                                                  | Net Name                                                                                                                                                                                   | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed |    2 |     2 |   yes |         0.383 |     0.019 |
+|     2 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk_delayed |    2 |     2 |   yes |         0.368 |     0.018 |
+|     3 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed |    2 |     2 |   yes |         0.377 |     0.019 |
+|     4 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk_delayed |    2 |     2 |   yes |         0.392 |     0.020 |
+|     5 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk         |    4 |     4 |   yes |         0.369 |     0.022 |
+|     6 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/O1                  |    8 |    16 |   yes |         0.402 |     0.025 |
+|     7 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/O1                  |    8 |    16 |   yes |         0.388 |     0.024 |
+|     8 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/O1                  |    8 |    16 |   yes |         0.386 |     0.024 |
+|     9 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/O1                  |    8 |    16 |   yes |         0.402 |     0.025 |
+|    10 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk         |   11 |    11 |   yes |         0.369 |     0.024 |
+|    11 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk         |   11 |    11 |   yes |         0.384 |     0.025 |
+|    12 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk         |   18 |    18 |   yes |         0.382 |     0.025 |
+|    13 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk         |   18 |    18 |   yes |         0.371 |     0.024 |
+|    14 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk         |   18 |    18 |   yes |         0.369 |     0.024 |
+|    15 | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out              | bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk         |   18 |    18 |   yes |         0.384 |     0.025 |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+
+
+7. Clock Regions : Key Resource Utilization
+-------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E1   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 21600 |    0 |  3200 |    0 |    60 |    0 |    30 |    0 |    60 |
+| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |    6 | 20000 |    0 |  3200 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    6 | 33600 |    0 |  5600 |    0 |   100 |    0 |    50 |    0 |   100 |
+| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    6 | 32000 |    0 |  5600 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X0Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    6 | 28800 |    0 |  5600 |    0 |   100 |    0 |    50 |    0 |   100 |
+| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    6 | 32000 |    0 |  5600 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X0Y3              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 5524 | 28800 |    0 |  5600 |    0 |   100 |    4 |    50 |    0 |   100 |
+| X1Y3              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |   26 |    50 | 3755 | 32000 |  946 |  5600 |    1 |    80 |    4 |    40 |    0 |    80 |
+| X0Y4              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     5 |    1 |     1 |    0 |    50 |    0 |    50 | 8215 | 20400 |  104 |  3000 |    0 |    50 |    9 |    25 |    0 |    60 |
+| X1Y4              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    5 |     5 |    0 |     0 |   36 |    50 |   44 |    50 | 5971 | 20000 |  922 |  3200 |    0 |    40 |    0 |    20 |    0 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* RAMB36 site can be used as two RAMB18/FIFO18 sites
+
+
+8. Net wise resources used in clock region X1Y0
+-----------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                      Clock Net Name                                     |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   6 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------------------+
+
+
+9. Net wise resources used in clock region X0Y1
+-----------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                   Clock Net Name                  |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   6 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+
+
+10. Net wise resources used in clock region X1Y1
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                   Clock Net Name                  |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   6 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+
+
+11. Net wise resources used in clock region X0Y2
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                      Clock Net Name                                     |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2 |
+| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | clock_unit_i/U0/clkfbout_buf_clock_unit                                                 |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   6 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1                                       |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------------------+
+
+
+12. Net wise resources used in clock region X1Y2
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                   Clock Net Name                  |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   6 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
+
+
+13. Net wise resources used in clock region X0Y3
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                         Clock Net Name                                        |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         1 |       0 |       0 |    0 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1                                             |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         1 |       0 |       0 |    0 |     0 |        0 | clock_unit_i/U0/clk_out1                                                                      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         2 |       0 |       0 |    3 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk |
+| BUFGCTRL    |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   31 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1       |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   44 |     0 |        0 | clock_unit_i/U0/clk_out4                                                                      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         4 |       0 |       0 | 5446 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2       |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------------------------------------------------+
+
+
+14. Net wise resources used in clock region X1Y3
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                      Clock Net Name                                      |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------------------------------------------------------------+
+| BUFH        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/pll_clk3                                  |
+| BUFG        |     ---     |   no  |         0 |        1 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | clock_unit_i/U0/clk_out4                                                                 |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   15 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         2 |       0 |       0 |  232 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2  |
+| BUFGCTRL    |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  518 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1  |
+| BUFG        |     ---     |   no  |         2 |        0 |       0 |         7 |       0 |       0 | 2990 |   946 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1                                        |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------------------------------------------------------------+
+
+
+15. Net wise resources used in clock region X0Y4
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                         Clock Net Name                                        |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk   |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         2 |       0 |       0 |   51 |     0 |        0 | clock_unit_i/U0/clk_out1                                                                      |
+| BUFGCTRL    |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   80 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1       |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        14 |       0 |       0 |  319 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 7765 |   104 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2       |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------------------------------------------------+
+
+
+16. Net wise resources used in clock region X1Y4
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                      Clock Net Name                                      |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       4 |       0 |   14 |     0 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk                               |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   15 |     0 |        0 | clock_unit_i/U0/clk_out4                                                                 |
+| BUFG        |     ---     |   no  |         0 |        0 |       5 |         0 |       0 |       0 |  315 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK |
+| BUFGCTRL    |     ---     |   no  |         0 |        0 |      16 |         0 |       0 |       0 | 1352 |     0 |        0 | bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1  |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 4275 |   922 |        0 | bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1                                        |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------------------------------------------------------------+
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y19 [get_cells bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i]
+set_property LOC BUFGCTRL_X0Y18 [get_cells bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1]
+set_property LOC BUFGCTRL_X0Y16 [get_cells bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2_i1.usrclk2_i1]
+set_property LOC BUFGCTRL_X0Y22 [get_cells bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/txoutclk_i.txoutclk_i]
+set_property LOC BUFGCTRL_X0Y20 [get_cells bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1]
+set_property LOC BUFGCTRL_X0Y17 [get_cells bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufg_clkdiv0]
+set_property LOC BUFGCTRL_X0Y21 [get_cells bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.u_bufg_mmcm_ps_clk]
+set_property LOC BUFGCTRL_X0Y1 [get_cells clock_unit_i/U0/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y3 [get_cells clock_unit_i/U0/clkout2_buf]
+set_property LOC BUFGCTRL_X0Y4 [get_cells clock_unit_i/U0/clkout3_buf]
+set_property LOC BUFGCTRL_X0Y0 [get_cells clock_unit_i/U0/clkout4_buf]
+set_property LOC BUFGCTRL_X0Y2 [get_cells clock_unit_i/U0/clkf_buf]
+
+# Location of IO Clock Primitives
+
+# Location of MMCM Clock Primitives
+set_property LOC MMCME2_ADV_X0Y4 [get_cells bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i]
+set_property LOC MMCME2_ADV_X1Y3 [get_cells bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.mmcm_i]
+set_property LOC MMCME2_ADV_X0Y2 [get_cells clock_unit_i/U0/mmcm_adv_inst]
+
+# Location of BUFH Clock Primitives
+set_property LOC BUFHCE_X0Y36 [get_cells bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufh_auxout_clk]
+set_property LOC BUFHCE_X1Y36 [get_cells bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufh_pll_clk3]
+
+# Location of BUFR Clock Primitives
+
+# Location of BUFMR Clock Primitives
+
+# Location of PLL Clock Primitives
+set_property LOC PLLE2_ADV_X1Y3 [get_cells bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i]
+
+# Location of IO Primitives which is load of clock spine
+
+# Location of clock ports
+
+# Clock net "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK" driven by instance "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i" located at site "BUFGCTRL_X0Y19"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1" driven by instance "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1" located at site "BUFGCTRL_X0Y18"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2" driven by instance "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2_i1.usrclk2_i1" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=clock_unit_i/U0/mmcm_adv_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/O2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk" driven by instance "bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1" located at site "BUFGCTRL_X0Y20"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/pcie_core_i/gt_top.gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/user_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/u_bufg_clkdiv0" located at site "BUFGCTRL_X0Y17"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.mmcm_i} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/freq_refclk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i" located at site "PLLE2_ADV_X1Y3"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/freq_refclk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/freq_refclk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/freq_refclk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/freq_refclk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mem_refclk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i" located at site "PLLE2_ADV_X1Y3"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mem_refclk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mem_refclk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mem_refclk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mem_refclk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/gen_mmcm.u_bufg_mmcm_ps_clk" located at site "BUFGCTRL_X0Y21"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/mmcm_ps_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/sync_pulse" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i" located at site "PLLE2_ADV_X1Y3"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/sync_pulse
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/sync_pulse] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/sync_pulse"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/sync_pulse] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/O1" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in" located at site "PHASER_IN_PHY_X1Y16"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/O1
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/O1"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out" located at site "PHASER_OUT_PHY_X1Y16"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out" located at site "PHASER_OUT_PHY_X1Y16"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk_delayed] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/O1" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in" located at site "PHASER_IN_PHY_X1Y17"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/O1
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/O1"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out" located at site "PHASER_OUT_PHY_X1Y17"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk_delayed" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out" located at site "PHASER_OUT_PHY_X1Y17"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk_delayed
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk_delayed] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk_delayed"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk_delayed] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/O1" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in" located at site "PHASER_IN_PHY_X1Y18"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/O1
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/O1"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out" located at site "PHASER_OUT_PHY_X1Y18"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out" located at site "PHASER_OUT_PHY_X1Y18"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk_delayed] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/O1" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in" located at site "PHASER_IN_PHY_X1Y19"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/O1
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/O1"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out" located at site "PHASER_OUT_PHY_X1Y19"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk_delayed" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out" located at site "PHASER_OUT_PHY_X1Y19"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk_delayed
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk_delayed] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk_delayed"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk_delayed] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out" located at site "PHASER_OUT_PHY_X1Y13"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out" located at site "PHASER_OUT_PHY_X1Y14"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk" driven by instance "bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out" located at site "PHASER_OUT_PHY_X1Y15"
+#startgroup
+create_pblock CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk
+add_cells_to_pblock [get_pblocks  CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk"}]]]
+resize_pblock [get_pblocks CLKAG_bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "clock_unit_i/U0/clk_out1" driven by instance "clock_unit_i/U0/clkout1_buf" located at site "BUFGCTRL_X0Y1"
+#startgroup
+create_pblock CLKAG_clock_unit_i/U0/clk_out1
+add_cells_to_pblock [get_pblocks  CLKAG_clock_unit_i/U0/clk_out1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clock_unit_i/U0/clk_out1"}]]]
+resize_pblock [get_pblocks CLKAG_clock_unit_i/U0/clk_out1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
+
+# Clock net "clock_unit_i/U0/clk_out4" driven by instance "clock_unit_i/U0/clkout4_buf" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock CLKAG_clock_unit_i/U0/clk_out4
+add_cells_to_pblock [get_pblocks  CLKAG_clock_unit_i/U0/clk_out4] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=bpm_pcie_a7_i/u_ddr_core/u_ddr3_infrastructure/plle2_i} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clock_unit_i/U0/clk_out4"}]]]
+resize_pblock [get_pblocks CLKAG_clock_unit_i/U0/clk_out4] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+#endgroup
