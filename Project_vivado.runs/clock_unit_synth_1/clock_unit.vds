@@ -1,0 +1,394 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:24:04 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jul 28 09:41:26 2015
+# Process ID: 8408
+# Log file: D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1/clock_unit.vds
+# Journal file: D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clock_unit.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7a200tffg1156-2
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.cache/wt [current_project]
+# set_property parent.project_path D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.xpr [current_project]
+# set_property default_lib work [current_project]
+# set_property target_language VHDL [current_project]
+# read_ip D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/DevelProgs/Xilinx/Vivado/2014.4/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'clock_unit' generated file not found 'd:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clock_unit' generated file not found 'd:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clock_unit' generated file not found 'd:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clock_unit' generated file not found 'd:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clock_unit' generated file not found 'd:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_funcsim.vhdl'. Please regenerate to continue.
+# set_property used_in_implementation false [get_files -all d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.dcp]
+# set_property is_locked true [get_files D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.xci]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file clock_unit.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top clock_unit -part xc7a200tffg1156-2 -mode out_of_context
+Command: synth_design -top clock_unit -part xc7a200tffg1156-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-1223] The version limit for your license is '2014.12' and will expire in -209 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 249.168 ; gain = 88.961
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'clock_unit' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.vhd:92]
+INFO: [Synth 8-3491] module 'clock_unit_clk_wiz' declared at 'd:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:77' bound to instance 'U0' of component 'clock_unit_clk_wiz' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'clock_unit_clk_wiz' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:92]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 8.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:135]
+INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:210]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:217]
+INFO: [Synth 8-113] binding component instance 'clkout2_buf' to cell 'BUFG' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:224]
+INFO: [Synth 8-113] binding component instance 'clkout3_buf' to cell 'BUFG' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:229]
+INFO: [Synth 8-113] binding component instance 'clkout4_buf' to cell 'BUFG' [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'clock_unit_clk_wiz' (1#1) [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_clk_wiz.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'clock_unit' (2#1) [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.vhd:92]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 283.270 ; gain = 123.063
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 283.270 ; gain = 123.063
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a200t/ClockRegion.xml
+Loading clock buffers from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a200t/ClockBuffers.xml
+Loading clock placement rules from D:/DevelProgs/Xilinx/Vivado/2014.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a200t/ffg1156/Package.xml
+Loading io standards from D:/DevelProgs/Xilinx/Vivado/2014.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_board.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_board.xdc] for cell 'U0'
+Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.xdc] for cell 'U0'
+Parsing XDC File [D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-2] Deriving generated clocks
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 542.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tffg1156-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clock_unit 
+Detailed RTL Component Info : 
+Module clock_unit_clk_wiz 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 542.004 ; gain = 381.797
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 570.777 ; gain = 410.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 570.777 ; gain = 410.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 579.754 ; gain = 419.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 579.754 ; gain = 419.547
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 579.754 ; gain = 419.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 579.754 ; gain = 419.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     5|
+|2     |MMCME2_ADV |     1|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------+-------------------+------+
+|      |Instance |Module             |Cells |
++------+---------+-------------------+------+
+|1     |top      |                   |     6|
+|2     |  U0     |clock_unit_clk_wiz |     6|
++------+---------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 579.754 ; gain = 419.547
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 579.754 ; gain = 121.539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 579.754 ; gain = 419.547
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_board.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_board.xdc] for cell 'U0'
+Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 594.383 ; gain = 395.711
+# rename_ref -prefix_all clock_unit_
+# write_checkpoint -noxdef clock_unit.dcp
+# catch { report_utilization -file clock_unit_utilization_synth.rpt -pb clock_unit_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 594.383 ; gain = 0.000
+# if { [catch {
+#   file copy -force D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.runs/clock_unit_synth_1/clock_unit.dcp D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit.dcp
+# } _RESULT ] } { 
+#   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+# }
+# if { [catch {
+#   write_verilog -force -mode synth_stub D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_stub.v
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_vhdl -force -mode synth_stub D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_stub.vhdl
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_verilog -force -mode funcsim D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_funcsim.v
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_vhdl -force -mode funcsim D:/Devel/projekty/TMS/project_vivado_20150716.tar/Project_vivado.srcs/sources_1/ip/clock_unit/clock_unit_funcsim.vhdl
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+# }
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 09:42:07 2015...

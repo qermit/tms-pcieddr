@@ -1,0 +1,41 @@
+peripheral {
+  name = "Control and status registers";
+  description = "Wishbone slave for control and status registers";
+  hdl_entity = "wb_csr";
+
+  prefix = "wb_test_reg";
+
+  reg {
+    name = "id";
+    prefix = "id";
+
+    field {
+      name = "val";
+      description = "ID";
+      prefix = "val";
+      type = SLV;
+      size = 32;
+      access_bus = READ_ONLY;
+      access_dev = WRITE_ONLY;
+    };
+
+  };
+
+  reg {
+    name = "IO TEST";
+    prefix = "io";
+
+    field {
+      name = "IO";
+      prefix = "io";
+      description = "32bit write/read register";
+      type = SLV;
+      size = 32;
+      access_bus = READ_WRITE;
+      access_dev = READ_ONLY;
+
+    };
+  }; 
+ 
+
+};

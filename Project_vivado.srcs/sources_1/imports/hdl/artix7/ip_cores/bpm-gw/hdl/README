@@ -1,0 +1,46 @@
+==========================================================
+
+Folder containing all o the BPM FPGA firmware, testbenches 
+and related test software
+
+===============================================
+
+The project makes use (directly or indirectly) of tools and projects
+developed by CERN and others:
+
+hdl-make:
+	http://www.ohwr.org/projects/hdl-make
+etherbone-core:
+	http://www.ohwr.org/projects/etherbone-core
+wishbone-gen:
+	http://www.ohwr.org/projects/wishbone-gen
+platform-independent core collection: 
+	http://www.ohwr.org/projects/general-cores
+software for white-rabbit:
+  http://www.ohwr.org/projects/wrpc-sw
+
+===============================================
+
+The project modifies some tools in order to supply some specific needs:
+
+Modified hdl-make tool in order to allow simulation with ISim Xilinx Simulator
+
+hdl-make2:
+  https://github.com/lerwys/hdl-make2
+
+===================================
+PCIe firmware
+===================================
+All cores were updated & regenerated with a ISE 14.3 software.
+Synthesis and simulation were tested with ISE 14.3.
+
+1. Synthesis
+   Go to syn/pcie/ directory. Run 'hdlmake' followed with 'make'.
+
+2. Simulation
+   Go to testbench/pcie/ directory.
+Set HOST_PLATFORM, in case of Linux it's either 'lin' or 'lin64'.
+Run 'hdlmake'.
+In generated Makefile, set TOP_MODULE to 'tf64_pcie_axi'.
+Run 'make && make fuse'.
+To get ISim window, run generated simulation with 'isim_proj -gui'

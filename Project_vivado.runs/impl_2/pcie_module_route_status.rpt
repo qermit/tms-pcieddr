@@ -1,0 +1,43 @@
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :       53070 :
+       # of nets not needing routing.......... :       16601 :
+           # of internally routed nets........ :       15733 :
+           # of nets with no loads............ :         868 :
+       # of routable nets..................... :       36469 :
+           # of unrouted nets................. :           1 :
+           # of fully routed nets............. :       36463 :
+       # of nets with routing errors.......... :           5 :
+           # of nets with some unrouted pins.. :           5 :
+   ------------------------------------------- : ----------- :
+
+
+Nets with Routing Errors:
+  bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv
+    Unrouted Pins:
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/output_[10].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/output_[11].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/output_[2].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/output_[3].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+  bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk
+    Unrouted Pins:
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[10].oserdes_dq_.sdr.oserdes_dq_i/CLK
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[11].oserdes_dq_.sdr.oserdes_dq_i/CLK
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[1].oserdes_dq_.sdr.oserdes_dq_i/CLK
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[9].oserdes_dq_.sdr.oserdes_dq_i/CLK
+  bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv
+    Unrouted Pins:
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[10].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[11].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[1].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/output_[9].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+  bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk
+    Unrouted Pins:
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/output_[1].oserdes_dq_.sdr.oserdes_dq_i/CLK
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/output_[9].oserdes_dq_.sdr.oserdes_dq_i/CLK
+  bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv
+    Unrouted Pins:
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/output_[1].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+      bpm_pcie_a7_i/u_ddr_core/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/output_[9].oserdes_dq_.sdr.oserdes_dq_i/CLKDIV
+

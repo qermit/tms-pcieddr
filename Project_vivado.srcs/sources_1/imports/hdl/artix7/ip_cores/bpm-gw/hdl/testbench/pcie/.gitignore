@@ -1,0 +1,17 @@
+#ignore temporary editor files
+*~
+#ignore ISim stuff
+isim*
+xilinxsim.ini
+*.wdb
+#ignore temporary simulation files
+*.dat
+work*
+fuse*
+glbl.v
+#modelsim stuff
+transcript
+modelsim.in*
+*.wlf
+*.version
+
